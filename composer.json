@@ -21,7 +21,7 @@
     },
     "require": {
         "monolog/monolog": "^1.25",
-        "app-insights-php/client": "^0.4.5"
+        "app-insights-php/client": "^0.2.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5",

@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3601bfa6926c25c191d38b71f94eca65",
+    "content-hash": "a582640e8598d39adecd2e3e778b03f9",
     "packages": [
         {
             "name": "app-insights-php/client",
-            "version": "1.x-dev",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/meidlinga-php-deps/client.git",
@@ -22,7 +22,7 @@
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.0",
-                "microsoft/application-insights": "^0.4.5",
+                "microsoft/application-insights": "dev-master#0.4.7",
                 "php": "^7.3 || ^8.0",
                 "psr/log": "^1.1",
                 "psr/simple-cache": "^1.0"
@@ -37,7 +37,25 @@
                     "AppInsightsPHP\\Client\\": "src/AppInsightsPHP/Client/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "AppInsightsPHP\\Client\\Tests\\": "tests/AppInsightsPHP/Client/Tests/"
+                }
+            },
+            "scripts": {
+                "phpunit": [
+                    "phpunit --colors=always"
+                ],
+                "static:analyze": [
+                    "php-cs-fixer fix --dry-run"
+                ],
+                "test": [
+                    "@phpunit"
+                ],
+                "cs:php:fix": [
+                    "php-cs-fixer fix"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -48,13 +66,16 @@
                 }
             ],
             "description": "Microsoft App Insights telemetry client php wrapper",
+            "support": {
+                "source": "https://github.com/meidlinga-php-deps/client/tree/1.x"
+            },
             "funding": [
                 {
-                    "url": "https://github.com/norberttech",
-                    "type": "github"
+                    "type": "github",
+                    "url": "https://github.com/norberttech"
                 }
             ],
-            "time": "2021-02-13T16:41:06+00:00"
+            "time": "2021-02-16T12:28:44+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -245,16 +266,16 @@
         },
         {
             "name": "microsoft/application-insights",
-            "version": "0.4.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Microsoft/ApplicationInsights-PHP.git",
-                "reference": "9c6cf3a67b9f79dc2a7204309579fbb2f4d800aa"
+                "url": "https://github.com/microsoft/ApplicationInsights-PHP.git",
+                "reference": "95407ee7978a729f9bad5e2469ff07aadfe6bbd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Microsoft/ApplicationInsights-PHP/zipball/9c6cf3a67b9f79dc2a7204309579fbb2f4d800aa",
-                "reference": "9c6cf3a67b9f79dc2a7204309579fbb2f4d800aa",
+                "url": "https://api.github.com/repos/microsoft/ApplicationInsights-PHP/zipball/95407ee7978a729f9bad5e2469ff07aadfe6bbd3",
+                "reference": "95407ee7978a729f9bad5e2469ff07aadfe6bbd3",
                 "shasum": ""
             },
             "require": {
@@ -285,7 +306,7 @@
                 "telemetry"
             ],
             "abandoned": true,
-            "time": "2019-04-26T05:48:58+00:00"
+            "time": "2019-07-31T21:50:37+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4040,11 +4061,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "app-insights-php/client": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],

@@ -9,6 +9,12 @@
             "email": "norbert@orzechowicz.pl"
         }
     ],
+    "repositories": [
+	    {
+		    "type": "vcs",
+		    "url": "https://github.com/meidlinga/client"
+	    }
+    ],
     "autoload": {
         "psr-4": {
             "AppInsightsPHP\\Monolog\\": "src/AppInsightsPHP/Monolog/"
@@ -21,7 +27,7 @@
     },
     "require": {
         "monolog/monolog": "^1.25",
-        "app-insights-php/client": "^0.2.6"
+        "app-insights-php/client": "1.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5",

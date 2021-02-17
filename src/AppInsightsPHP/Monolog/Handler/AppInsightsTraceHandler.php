@@ -76,7 +76,8 @@ final class AppInsightsTraceHandler extends AbstractProcessingHandler
                 'datetime' => ($record['datetime'] instanceof \DateTimeInterface) ? $record['datetime']->format('c') : $record['datetime'],
                 'monolog_level' => $record['level_name'],
             ],
-            $formattedRecord['context']
+            $formattedRecord['context'],
+            $formattedRecord['extra']
         );
 
         if (TelemetryData::message($message, $properties)->exceededMaximumSize()) {
